@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SCROLL */
+*::-webkit-scrollbar {
+  width: 6px; /* ширина scrollbar */
+}
+*::-webkit-scrollbar-track {
+  background-color: #000; /* цвет плашки */
+}
+*::-webkit-scrollbar-thumb {
+  background: #1f1f1f; /* цвет дорожки */
+  border-radius: 8px; /* закругления плашки */
+}
+/* SCROLL */

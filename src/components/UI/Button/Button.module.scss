@@ -1,0 +1,206 @@
+@import "../../styles.scss";
+
+// GLOBAL
+
+.Button {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $textFontColorMain;
+  transition: 0.35s;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.contentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+// GLOBAL
+
+//TYPES
+
+.buttonTypeFilled {
+  background-color: $buttonFilledColor;
+  box-shadow: $buttonFilledShadow;
+}
+
+.buttonTypeFilled:hover {
+  background-color: $buttonFilledColorActive;
+}
+
+.buttonTypePrimary {
+  background-color: $buttonPrimaryColor;
+  box-shadow: $buttonPrimaryShadow;
+}
+
+.buttonTypePrimary:hover {
+  background-color: $buttonPrimaryColorActive;
+}
+
+.buttonTypeOutlined {
+  background-color: $buttonOutlinedColor;
+  box-shadow: $buttonOutlinedShadow;
+}
+
+.buttonTypeOutlined:hover {
+  background-color: $buttonOutlinedColorActive;
+}
+
+.buttonTypeText {
+  background-color: transparent;
+}
+
+.buttonTypeText:hover {
+  background-color: $buttonTextColor;
+}
+
+.buttonTypeLink {
+  background-color: transparent;
+  color: $buttonLinkTextColor;
+}
+
+.buttonTypeLink:hover {
+  text-decoration: underline;
+}
+
+//TYPES
+
+//SIZES
+
+.buttonSizeSmall {
+  padding: 0 10px;
+  font-size: $buttonFontSizeSmall;
+  height: $buttonHeightSmall;
+}
+
+.buttonSizeMedium {
+  padding: 0 15px;
+  font-size: $buttonFontSizeMedium;
+  height: $buttonHeightMedium;
+}
+
+.buttonSizeLarge {
+  padding: 0 20px;
+  font-size: $buttonFontSizeLarge;
+  height: $buttonHeightLarge;
+}
+
+//SIZES
+
+//DISABLED
+
+.buttonDisabled {
+  filter: $stateDisabled;
+  cursor: auto;
+  pointer-events: none;
+}
+
+//DISABLED
+
+//SHAPE
+
+.buttonShapeSmooth {
+  border-radius: 7px;
+}
+
+.buttonShapeCircle {
+  border-radius: 40px;
+}
+
+//SHAPE
+
+//WAVES
+
+.buttonWavesHover:hover {
+  .flare {
+    animation: flareAnimation;
+    left: -180%;
+    background: $flareGradient;
+    animation-name: flareAnimation;
+    animation-duration: 0.75s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.buttonWavesActive:active {
+  .flare {
+    animation: flareAnimation;
+    left: -180%;
+    background: $flareGradient;
+    animation-name: flareAnimation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.buttonWavesPermanent {
+  .flare {
+    animation: flareAnimation;
+    left: -180%;
+    background: $flareGradient;
+    animation-name: flareAnimation;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.buttonWavesNone {
+}
+
+//WAVES
+
+//WAVES ANIMATION
+
+.flare {
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+  height: 200%;
+  width: 200%;
+  pointer-events: none;
+}
+
+@keyframes flareAnimation {
+  0% {
+    opacity: 1;
+    left: -150%;
+  }
+  100% {
+    opacity: 1;
+    left: 150%;
+  }
+}
+
+//WAVES ANIMATION
+
+//LOADING
+
+.loadingIcon {
+  animation: loadingAnimation 1s ease-in-out infinite forwards;
+  line-height: 0;
+}
+
+@-webkit-keyframes loadingAnimation {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+//LOADING

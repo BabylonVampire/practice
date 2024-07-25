@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+
+.checkBox {
+	margin: 10px;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	color: $textFontColorMain;
+	font-family: $fontFamilyMain;
+
+	&Input {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		opacity: 0;
+	}
+	&Fake {
+		height: 100%;
+		width: 100%;
+		transition: 0.3s;
+		background-color: $colorMain;
+		box-shadow: $shadowMain;
+		border-radius: 10px;
+		pointer-events: none;
+		user-select: none;
+	}
+	&Input:checked + &Fake {
+		background-color: $colorSecondary;
+		box-shadow: $shadowChecked;
+	}
+}

@@ -1,0 +1,72 @@
+@import '../../styles.scss';
+
+.Text,
+.Paragraph,
+.Title {
+	color: $textFontColorMain;
+	font-family: $fontFamilyMain;
+	font-weight: 0;
+}
+
+.textStatusDefault {
+}
+
+.textStatusWarning {
+	color: $textStatusWarning;
+}
+.textStatusError {
+	color: $textStatusError;
+}
+.textStatusSuccess {
+	color: $textStatusSuccess;
+}
+.textStatusInfo {
+	color: $textStatusInfo;
+}
+
+.paragraphFontSizeSmall {
+	font-size: $textSizeSmall;
+}
+
+.paragraphFontSizeMedium {
+	font-size: $textSizeMedium;
+}
+
+.paragraphFontSizeLarge {
+	font-size: $textSizeLarge;
+}
+
+.paragraphTypeDefault {
+}
+
+.paragraphTypeCode {
+	padding: 25px;
+	border-radius: 8px;
+	background-color: $textWrapperCodeColor;
+	box-shadow: $textWrapperCodeShadow;
+	font-family: $fontFamilyCode !important;
+	color: $textFontColorCode;
+}
+
+.textFat {
+	font-weight: bolder !important;
+}
+
+.titleLevel1 {
+	font-size: $titleSizeH1;
+}
+.titleLevel2 {
+	font-size: $titleSizeH2;
+}
+.titleLevel3 {
+	font-size: $titleSizeH3;
+}
+.titleLevel4 {
+	font-size: $titleSizeH4;
+}
+.titleLevel5 {
+	font-size: $titleSizeH5;
+}
+.titleLevel6 {
+	font-size: $titleSizeH6;
+}
